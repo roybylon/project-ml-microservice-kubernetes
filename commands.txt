@@ -1,0 +1,87 @@
+    1  bash resize.sh 100
+    2  git clone git@github.com:roybylon/project-ml-microservice-kubernetes.git
+    3  ssh-keygen -t rsa
+    4  cat /home/ec2-user/.ssh/id_rsa.pub
+    5  git clone git@github.com:roybylon/project-ml-microservice-kubernetes.git
+    6  cd project-ml-microservice-kubernetes/
+    7  make setup
+    8  source ~/.devops/bin/activate
+    9  make install
+   10  wget -O ~/environment/ https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+   11  wget https://github.com/hadolint/hadolint/releases/download/v2.10.0/hadolint-Linux-x86_64
+   12  chmod 777 hadolint-Linux-x86_64 
+   13  ls -al
+   14  mv hadolint-Linux-x86_64 /bin/hadolint
+   15  make install
+   16  make lint
+   17  git status
+   18  git add Makefile
+   19  git commit -m "Edit makefile"
+   20  sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+   21  sudo chmod +x /bin/hadolint
+   22  make lint
+   23  source ~/.devops/bin/activate
+   24  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   25  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+   26  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   27  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+   28  kubectl version --client
+   29  docker version
+   30  kubectl version
+   31  ./run_docker.sh
+   32  cd project-ml-microservice-kubernetes/
+   33  ./run_docker.sh 
+   34  make install
+   35  make lint
+   36  ./run_docker.sh 
+   37  docker-compose down
+   38  docker ls
+   39  docker image ls
+   40  ./run_docker.sh 
+   41  docker kill *
+   42  docker image ls
+   43  docker kill roybylon/ml-api
+   44  docker kill ml-api
+   45  docker kill -t roybylon/ml-api
+   46  docker kill --help
+   47  docker container kill roybylon/ml-api
+   48  docker container rm -v *
+   49  docker container rm
+   50  docker container rm roybylon/ml-api
+   51  docker ls
+   52  docker container create busybox ls
+   53  docker image ls
+   54  docker container logs 206151a37f2a
+   55  docker container logs c98db043bed9
+   56  docker container start 206151a37f2a
+   57  docker container ls -a
+   58  docker container logs d488cc7f3652
+   59  docker container stop d488cc7f3652
+   60  docker container ls -a
+   61  docker container rm -a
+   62  docker container rm d488cc7f3652
+   63  docker container ls -a
+   64  docker container rm ac145e7a88cc
+   65  docker container rm 00b44cca78a0
+   66  docker container ls -a
+   67  docker container rm 92228f202fec
+   68  docker container rm 8d480d6c70ed
+   69  docker container ls -a
+   70  ./run_docker.sh 
+   71  make install
+   72  ./run_docker.sh 
+   73  ./upload_docker.sh 
+   74  minikube start
+   75  ./run_kubernetes.sh
+   76  kubectl config view
+   77  ./run_kubernetes.sh
+   78  git status
+   79  git add .
+   80  git status
+   81  git commit -m "add deployment files to github"
+   82  git push
+   83  git status
+   84  git add .
+   85  git commit -m "add circleci status badge"
+   86  git push
+   87  history > commands.txt
